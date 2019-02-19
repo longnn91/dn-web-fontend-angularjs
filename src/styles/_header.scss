@@ -1,0 +1,57 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 0;
+  background: $white_color;
+  box-shadow: $white_color 0px 10px 40px 0px;
+  z-index: $zindex-max;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+    max-width: $max-width;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+
+  &__logo {
+    flex-basis: 25%;
+
+    &__img {
+      width: 115px;
+    }
+  }
+
+  &__menu {
+    flex-basis: 50%;
+    min-width: 300px;
+    max-width: 375px;
+  }
+
+  &__account {
+    flex-basis: 25%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    &__item {
+      margin-left: 20px;
+    }
+
+    &__icon {
+      color: $gray_light_color;
+      font-size: 12px;
+    }
+
+    &__text {
+      font-size: 12px;
+      font-weight: 700;
+      color: $black_color;
+    }
+  }
+}
