@@ -18,10 +18,10 @@ const CopyWebpackPluginConfig = new CopyWebpackPlugin([
      ]);
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/app.js',
   output: {
     path: path.resolve('dist'),
-    filename: 'index_bundle.js'
+    filename: 'app_bundle.js'
   },
   resolve: {
     extensions: ['.jsx', '.js'],
@@ -33,6 +33,16 @@ module.exports = {
   },
   module: {
     rules: [
+      { test: /\.(html)$/,
+        use: [
+          {
+            loader: "html-loader",
+            options: {
+              attrs: [':data-src']
+            }
+          }
+        ]
+      },
       { test: /\.css$/,
         use: [
           { loader: "style-loader" },
@@ -66,7 +76,7 @@ module.exports = {
        {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: "babel-loader"
+        use: [ 'angular-template-url-loader', 'babel-loader' ]
       }
     ]
   },
