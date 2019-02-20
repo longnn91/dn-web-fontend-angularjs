@@ -1,11 +1,22 @@
-routes.$inject = ['$stateProvider'];
+export default class ConfigRoute {
 
-export default function routes($stateProvider) {
-  $stateProvider
-    .state('home', {
-      url: '/',
-      templateUrl: 'modules/home/home.html',
-      controller: 'HomeController',
-      controllerAs: 'home'
+  static $inject = ['$stateProvider'];
+  static instance;
+
+  static getInstance($stateProvider) {
+    if (!ConfigRoute.instance) {
+      ConfigRoute.instance = new ConfigRoute($stateProvider);
+    }
+    return ConfigRoute.instance;
+  }
+
+  constructor($stateProvider) {
+    $stateProvider
+      .state('home', {
+        url: '/',
+        templateUrl: 'modules/home/home.html',
+        controller: 'HomeController',
+        controllerAs: 'HomeCtrl'
     });
+  }
 }

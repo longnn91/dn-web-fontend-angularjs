@@ -1,7 +1,16 @@
 import angular from 'angular';
-import uirouter from 'angular-ui-router';
-import routing from './app.config';
-import home from 'modules/home';
+import 'angular-ui-router';
+import 'angular-translate';
+import 'configs/app.config';
+import 'configs/app.router';
+import 'modules';
+import 'services';
 
-angular.module('app', [uirouter, home])
-  .config(routing);
+angular.module(APP_NAME, [
+  'ui.router',
+  'pascalprecht.translate',
+  `${APP_NAME}.config`,
+  `${APP_NAME}.router`,
+  `${APP_NAME}.services`,
+  `${APP_NAME}.modules`
+]);

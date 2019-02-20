@@ -2,6 +2,9 @@
     ./webpack.config.js
 */
 const path = require('path');
+const dotenv = require('dotenv');
+const webpack = require('webpack');
+dotenv.config();
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
@@ -28,7 +31,10 @@ module.exports = {
     alias: {
       assets: path.resolve(__dirname, './assets'),
       src: path.resolve(__dirname, './src'),
-      modules: path.resolve(__dirname, './src/modules')
+      modules: path.resolve(__dirname, './src/modules'),
+      services: path.resolve(__dirname, './src/services'),
+      configs: path.resolve(__dirname, './src/configs'),
+      i18n: path.resolve(__dirname, './i18n')
     }
   },
   module: {
@@ -82,7 +88,10 @@ module.exports = {
   },
   plugins: [
     HtmlWebpackPluginConfig,
-    CopyWebpackPluginConfig
+    CopyWebpackPluginConfig,
+    new webpack.DefinePlugin({
+      'APP_NAME': JSON.stringify(process.env.APP_NAME)
+    })
   ],
   devServer: {
     contentBase: '/dist',
