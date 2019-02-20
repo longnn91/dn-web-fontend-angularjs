@@ -3,17 +3,18 @@ import langVi from 'i18n/vi.json';
 
 class AppConfig {
 
-  static $inject = ['$translateProvider'];
+  static $inject = ['$httpProvider', '$translateProvider'];
   static instance;
 
-  static getInstance($translateProvider) {
+  static getInstance($httpProvider, $translateProvider) {
     if (!AppConfig.instance) {
-      AppConfig.instance = new AppConfig($translateProvider)
+      AppConfig.instance = new AppConfig($httpProvider, $translateProvider)
     }
     return AppConfig.instance;
   }
 
-  constructor($translateProvider) {
+  constructor($httpProvider, $translateProvider) {
+    $httpProvider.interceptors.push('HttpInterceptorService');
     $translateProvider.translations('vi', langVi);
     $translateProvider.translations('en', langEn);
     $translateProvider.preferredLanguage('vi');

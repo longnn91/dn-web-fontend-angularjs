@@ -5,8 +5,25 @@
   width: 100%;
   padding: 15px 0;
   background: $white_color;
-  box-shadow: $white_color 0px 10px 40px 0px;
+  // box-shadow: $white_color 0px 10px 40px 0px;
   z-index: $zindex-max;
+
+  &__language {
+    position: relative;
+    cursor: pointer;
+    margin-left: 15px;
+
+    & > img {
+      height: 30px;
+      transition: all 0.8s ease-in-out 0s;
+    }
+
+    &__show {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
 
   &__container {
     display: flex;
@@ -24,6 +41,21 @@
     &__img {
       width: 115px;
     }
+
+    &__text {
+      font-size: 30px;
+      font-weight: bold;
+      color: $gray_weight_color;
+      letter-spacing: -4px;
+
+      span {
+        margin-right: 5px;
+      }
+
+      span:nth-child(3) {
+        color: $green_color;
+      }
+    }
   }
 
   &__menu {
@@ -36,22 +68,32 @@
     flex-basis: 25%;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
     flex-wrap: nowrap;
+    align-items: center;
 
     &__item {
       margin-left: 20px;
+      cursor: pointer;
+
+      &--text {
+        color: $gray_weight_color;
+
+        &:hover {
+          color: $gray_color;
+        }
+      }
     }
 
     &__icon {
-      color: $gray_light_color;
-      font-size: 12px;
+      font-size: 14px;
+      margin-right: 5px;
+      color: $gray_medium_1_color;
     }
 
     &__text {
       font-size: 12px;
       font-weight: 700;
-      color: $black_color;
+      color: $gray_weight_color;
     }
   }
 }

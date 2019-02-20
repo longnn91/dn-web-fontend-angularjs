@@ -34,6 +34,9 @@ module.exports = {
       modules: path.resolve(__dirname, './src/modules'),
       services: path.resolve(__dirname, './src/services'),
       configs: path.resolve(__dirname, './src/configs'),
+      components: path.resolve(__dirname, './src/components'),
+      styles: path.resolve(__dirname, './src/styles'),
+      base: path.resolve(__dirname, './src/base'),
       i18n: path.resolve(__dirname, './i18n')
     }
   },
@@ -90,13 +93,14 @@ module.exports = {
     HtmlWebpackPluginConfig,
     CopyWebpackPluginConfig,
     new webpack.DefinePlugin({
-      'APP_NAME': JSON.stringify(process.env.APP_NAME)
+      'APP_NAME': JSON.stringify(process.env.APP_NAME),
+      'API_URL': JSON.stringify(process.env.API_URL)
     })
   ],
   devServer: {
     contentBase: '/dist',
     historyApiFallback: true,
     host: 'training-frontend.com',
-    port: 3000
+    port: 3002
   }
 }
