@@ -12,9 +12,7 @@ class AppRouter {
 
   constructor($urlRouterProvider, $locationProvider) {
     $locationProvider.html5Mode(true);
-    $urlRouterProvider.otherwise(($injector, $location) => {
-      $location.path('/404');
-    });
+    $urlRouterProvider.otherwise('/');
   }
 }
 

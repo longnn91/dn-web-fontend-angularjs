@@ -1,33 +1,23 @@
 import langEn from 'i18n/en.json';
-import langJa from 'i18n/ja.json';
+import langVi from 'i18n/vi.json';
 
 class AppConfig {
 
-  static $inject = ['$httpProvider', 'laddaProvider', '$translateProvider', 'toastrConfig', 'localStorageServiceProvider'];
+  static $inject = ['$httpProvider', '$translateProvider'];
   static instance;
 
-  static getInstance($httpProvider, laddaProvider, $translateProvider, toastrConfig, localStorageServiceProvider) {
+  static getInstance($httpProvider, $translateProvider) {
     if (!AppConfig.instance) {
-      AppConfig.instance = new AppConfig($httpProvider, laddaProvider, $translateProvider, toastrConfig, localStorageServiceProvider);
+      AppConfig.instance = new AppConfig($httpProvider, $translateProvider)
     }
     return AppConfig.instance;
   }
-  constructor($httpProvider, laddaProvider, $translateProvider, toastrConfig, localStorageServiceProvider) {
+
+  constructor($httpProvider, $translateProvider) {
     $httpProvider.interceptors.push('HttpInterceptorService');
-    laddaProvider.setOption({
-      style: 'expand-left'
-    });
-    localStorageServiceProvider.setDefaultToCookie(false);
-    localStorageServiceProvider.setStorageType('sessionStorage');
-    localStorageServiceProvider.setPrefix('calling-platform');
-    $translateProvider.translations('ja', langJa);
+    $translateProvider.translations('vi', langVi);
     $translateProvider.translations('en', langEn);
-    $translateProvider.preferredLanguage('ja');
-    $translateProvider.useSanitizeValueStrategy('escape');
-    angular.extend(toastrConfig, {
-      preventOpenDuplicates: true,
-      positionClass: 'toast-top-center'
-    });
+    $translateProvider.preferredLanguage('vi');
   }
 }
 

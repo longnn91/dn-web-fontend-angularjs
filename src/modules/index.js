@@ -1,5 +1,5 @@
-import './dashboard';
+import './home';
 
-angular.module(`Dnland.modules`, [
-  `Dnland.Dashboard`,
+angular.module(`${APP_NAME}.modules`, [
+  `${APP_NAME}.Home`
 ]);
