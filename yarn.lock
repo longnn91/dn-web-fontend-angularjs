@@ -287,10 +287,13 @@ amdefine@>=0.0.4:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/amdefine/-/amdefine-1.0.1.tgz#4a5282ac164729e93619bcfd3ad151f817ce91f5"
 
-angular-cookies@^1.7.7:
-  version "1.7.7"
-  resolved "https://registry.yarnpkg.com/angular-cookies/-/angular-cookies-1.7.7.tgz#35d7383fea2bbab1385b74acfbc539df3c50d157"
-  integrity sha512-+osPNVIahz8nU4S+XCxTmmqwhJw/iPi1gUCHh8gVd4vjO/yP8I/dQza+WNwvCcWN4fY+lmp123lsMXneUVtm/g==
+angular-cookies@1.5.8:
+  version "1.5.8"
+  resolved "https://registry.yarnpkg.com/angular-cookies/-/angular-cookies-1.5.8.tgz#08f39fa2e17b6e3a916cd3ba7352f9d702e8a9fe"
+
+angular-local-storage@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/angular-local-storage/-/angular-local-storage-0.6.0.tgz#4dba9772fef752070de5a93e202be886b299c686"
 
 angular-template-url-loader@^2.0.0:
   version "2.0.0"
@@ -298,7 +301,11 @@ angular-template-url-loader@^2.0.0:
   dependencies:
     loader-utils "^1.1.0"
 
-angular-translate@^2.18.1:
+angular-toastr@^2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/angular-toastr/-/angular-toastr-2.1.1.tgz#9f8350ca482145a44d011a755b8fb3623d60544c"
+
+angular-translate@^2.12.1:
   version "2.18.1"
   resolved "https://registry.yarnpkg.com/angular-translate/-/angular-translate-2.18.1.tgz#b29ed0d2f9bac44075e7aad3284166c59e150791"
   dependencies:
@@ -310,7 +317,11 @@ angular-ui-router@^0.3.1:
   dependencies:
     angular "^1.0.8"
 
-"angular@>=1.2.26 <=1.7", angular@^1.0.8, angular@^1.7.7:
+angular@1.5.8:
+  version "1.5.8"
+  resolved "https://registry.yarnpkg.com/angular/-/angular-1.5.8.tgz#925a5392b8c212d09572dc446db7e01264e094cb"
+
+"angular@>=1.2.26 <=1.7", angular@^1.0.8:
   version "1.7.7"
   resolved "https://registry.yarnpkg.com/angular/-/angular-1.7.7.tgz#26bd87693deadcbd5944610a7a0463fc79a18803"
 

@@ -14,6 +14,7 @@ class AppConfig {
   }
 
   constructor($httpProvider, $translateProvider) {
+    this.$httpProvider = $httpProvider;
     $httpProvider.interceptors.push('HttpInterceptorService');
     $translateProvider.translations('vi', langVi);
     $translateProvider.translations('en', langEn);

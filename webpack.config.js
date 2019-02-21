@@ -37,6 +37,7 @@ module.exports = {
       components: path.resolve(__dirname, './src/components'),
       styles: path.resolve(__dirname, './src/styles'),
       base: path.resolve(__dirname, './src/base'),
+      common: path.resolve(__dirname, './src/common'),
       i18n: path.resolve(__dirname, './i18n')
     }
   },
