@@ -1,14 +1,14 @@
 <header class="header">
     <div class="header__container">
         <div class="header__logo">
-            <div class="header__logo__text cursor-pointer">
+            <div class="header__logo__text cursor-pointer" ui-sref="home">
                 <span>M</span>
                 <span>T</span>
                 <span>GREEN</span>
             </div>
         </div>
         <div class="header__menu menu">
-            <a class='menu__item'>Product</a>
+            <a class='menu__item' ui-sref="dashboard.product">Product</a>
             <a class='menu__item'>Price</a>
             <a class='menu__item'>About</a>
             <a class='menu__item'>FAQs</a>
@@ -24,7 +24,7 @@
                       <i class="header__account__icon fas fa-lock"></i>
                       <span class="header__account__text align-bt">Login</span>
                    </div>
-                   <div class="confirm__main">
+                   <div ng-if="0" class="confirm__main">
                        <login-component></login-component>
                    </div>
                </div>

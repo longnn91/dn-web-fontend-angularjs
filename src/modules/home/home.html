@@ -1,30 +1,8 @@
 <div class="wrapper">
     <header-component></header-component>
+    <greeting name="nguyen ngoc long"></greeting>
     <div class="main">
-      <section class="product-section">
-          <div class="product-section__list">
-              <div class="product-section__search">
-                  <form class="product-section__search__form" action="#">
-                      <input class="input product-section__search__input" type="text" name="keyword" />
-                      <select class="select product-section__search__select">
-                          <option value="volvo">Volvo</option>
-                          <option value="saab">Saab</option>
-                          <option value="mercedes">Mercedes</option>
-                          <option value="audi">Audi</option>
-                      </select>
-                      <input class="btn btn--gray product-section__search__submit" type="submit" value="SEARCH" />
-                  </form>
-                  <div class="confirm__pin">
-                       <button class="btn btn--green product-section__search__post" onClick={this.createPost}>POST NEW</button>
-                       <div ng-if="0" class="confirm__main">
-                           <login-component></login-component>
-                       </div>
-                  </div>
-              </div>
-              <ProductItem ng-if="0" key={index} order={index} data={item} />
-          </div>
-          <div class="product-section__banner"></div>
-      </section>
+        <ui-view name="dashboard"></ui-view>
     </div>
     <Footer/>
 </div>

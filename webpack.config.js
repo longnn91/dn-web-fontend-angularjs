@@ -34,6 +34,7 @@ module.exports = {
       modules: path.resolve(__dirname, './src/modules'),
       services: path.resolve(__dirname, './src/services'),
       configs: path.resolve(__dirname, './src/configs'),
+      directives: path.resolve(__dirname, './src/directives'),
       components: path.resolve(__dirname, './src/components'),
       styles: path.resolve(__dirname, './src/styles'),
       base: path.resolve(__dirname, './src/base'),

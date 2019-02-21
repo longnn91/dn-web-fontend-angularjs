@@ -8,6 +8,7 @@ import 'configs/app.config';
 import 'configs/app.router';
 import 'common';
 import 'modules';
+import 'directives'
 import 'services';
 import 'components';
 
@@ -20,5 +21,6 @@ angular.module(APP_NAME, [
   `${APP_NAME}.router`,
   `${APP_NAME}.services`,
   `${APP_NAME}.modules`,
+  `${APP_NAME}.directives`,
   `${APP_NAME}.components`
 ]);
